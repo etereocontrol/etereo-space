@@ -36,7 +36,7 @@
       min-height: 100vh; display: flex; flex-direction: column;
       justify-content: center; align-items: flex-start;
       background: radial-gradient(ellipse at 60% 40%, rgba(75,0,130,0.25) 0%, transparent 60%), var(--bg);
-      padding-top: 8rem; position: relative; overflow: hidden;
+      padding-top: 6rem; position: relative; overflow: hidden;
     }
     .hero-tag {
       font-size: 0.75rem; letter-spacing: 0.2em; color: var(--purple-accent);
@@ -124,6 +124,33 @@
 
     @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
     @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-18px);} }
+    .tako-hero {
+      width: 220px;
+      position: absolute;
+      right: 8%;
+      bottom: 0;
+      filter: drop-shadow(0 0 30px rgba(139,92,246,0.3));
+      animation: float 4s ease-in-out infinite;
+    }
+    @media (max-width: 768px) {
+      .tako-hero {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 160px;
+        display: block;
+        margin: 1.5rem auto 0;
+        animation: float 4s ease-in-out infinite;
+      }
+      #inicio {
+        padding-top: 5rem;
+      }
+      #inicio img[alt="ETÉREO"] {
+        width: 180px !important;
+        margin-bottom: 0.5rem !important;
+      }
+    }
+
     @keyframes slideUp { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);} }
     @keyframes countUp { from{opacity:0;} to{opacity:1;} }
 
@@ -282,19 +309,13 @@
   </ul>
 </nav>
 
-<section id="inicio">  <img src="logo-etereo.png.jpg.png" alt="ETÉREO" style="width:280px; max-width:80%; margin-bottom:1.5rem; display:block;">
+<section id="inicio">
+  <img src="logo-etereo.png.jpg.png" alt="ETÉREO" style="width:280px; max-width:80%; margin-bottom:1.5rem; display:block;">
   <h1 class="hero-title">Blindamos un país,<br/>un <span>sensor</span> a la vez.</h1>
   <p class="hero-sub">Monitoreo ambiental en tiempo real para proteger agua y aire en Venezuela — convirtiendo la crisis en infraestructura de <span style="color:#22d3a5;font-weight:600;">supervivencia</span>.</p>
   <p style="font-size:0.95rem; color:var(--purple-accent); font-style:italic; margin-top:-1rem; margin-bottom:2rem; letter-spacing:0.03em;">"Con estudio e inteligencia, todo es posible."</p>
   <a href="#problema" class="btn-primary">Conoce cómo funciona</a>
-  <img src="img15-removebg-preview.png" alt="Tako - Mascota ETÉREO" style="
-    width: 220px;
-    position: absolute;
-    right: 8%;
-    bottom: 0;
-    filter: drop-shadow(0 0 30px rgba(139,92,246,0.3));
-    animation: float 4s ease-in-out infinite;
-  ">
+  <img src="img15-removebg-preview.png" alt="Tako - Mascota ETÉREO" class="tako-hero">
 </section>
 
 <div class="divider"></div>
