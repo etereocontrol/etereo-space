@@ -333,6 +333,94 @@
     }
     .form-group input:focus, .form-group textarea:focus { border-color: var(--purple-accent); }
     .form-group textarea { resize: vertical; }
+  
+    /* ===== PROTOTIPOS SECTION ===== */
+    .prototipos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem 3rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+    .prototipo-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .prototipo-img-wrap {
+      width: 100%;
+      background: radial-gradient(ellipse at center, rgba(139,92,246,0.08) 0%, transparent 70%);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+    }
+    .prototipo-img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 24px rgba(139,92,246,0.2));
+      transition: filter 0.3s, transform 0.3s;
+    }
+    .prototipo-img:hover {
+      filter: drop-shadow(0 0 40px rgba(192,132,252,0.4));
+      transform: translateY(-4px);
+    }
+    .prototipo-nombre {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--purple-accent);
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .prototipos-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+  
+    .social-links {
+      margin: 1.2rem 0;
+      display: flex;
+      gap: 1rem;
+    }
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--purple-accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      border: 1px solid rgba(192,132,252,0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+    .instagram-link:hover {
+      background: rgba(192,132,252,0.1);
+      border-color: var(--purple-accent);
+      transform: translateY(-2px);
+    }
+  
+    .nav-ig {
+      color: var(--muted);
+      transition: color 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+    }
+    .nav-ig:hover {
+      color: var(--purple-accent);
+      transform: scale(1.15);
+    }
+  
+    .nav-ig-link {
+      color: var(--purple-accent) !important;
+    }
+    .nav-ig-link:hover {
+      color: var(--white) !important;
+    }
   </style>
 </head>
 <body>
@@ -343,10 +431,13 @@
     <ul class="nav-links" id="nav-links">
     <li><a href="#problema">Problema</a></li>
     <li><a href="#solucion">Solución</a></li>
+        <li><a href="#prototipos">Prototipos</a></li>
     <li><a href="#app-simulacion">App</a></li>
     <li><a href="#modelo">Modelo</a></li>
     <li><a href="#equipo">Equipo</a></li>
     <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://www.instagram.com/etereo.guard" target="_blank" rel="noopener" class="nav-ig-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>@etereo.guard</a></li>
   </ul>
 </nav>
 
@@ -379,12 +470,35 @@
     <div>
       <p class="section-tag">Nuestra solución</p>
       <h2 class="section-title">ETÉREO <span>Guard</span></h2>
-      <p class="section-body">Un sistema IoT de nodos inteligentes que monitoran agua y aire <span style="color:#22d3a5;font-weight:600;">24/7</span>, enviando alertas en tiempo real a través de nuestra app móvil.</p>
+      <p class="section-body">Un sistema IoT de nodos inteligentes que monitoran agua y aire <span style="color:#22d3a5;font-weight:600;">24/7</span> con <span style="color:#22d3a5;font-weight:600;">IA</span> integrada, enviando alertas en tiempo real a través de nuestra app móvil.</p>
     </div>
     <div>
       <div class="product-badge"><h3>💧 Nodo Agua</h3><p>Detecta pH, turbidez, hidrocarburos y metales pesados en cuerpos de agua con sensores de alta precisión.</p></div>
       <div class="product-badge"><h3>🌬️ Nodo Aire</h3><p>Mide partículas PM2.5, gases tóxicos y compuestos volátiles para alertar contaminación atmosférica.</p></div>
       <div class="product-badge"><h3>📱 App en tiempo real</h3><p>Dashboard interactivo con alertas inmediatas, historial de datos y reportes para toma de decisiones.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+<!-- PROTOTIPOS SECTION -->
+<section id="prototipos" style="background: var(--bg2);">
+  <p class="section-tag">Prototipos</p>
+  <h2 class="section-title">Nuestros <span>dispositivos</span></h2>
+  <div class="prototipos-grid">
+    <div class="prototipo-card">
+      <div class="prototipo-img-wrap">
+        <img src="IMG_8254 (1).jpg" alt="ETÉREO AIR GUARD" class="prototipo-img">
+      </div>
+      <h3 class="prototipo-nombre">AIR GUARD</h3>
+    </div>
+    <div class="prototipo-card">
+      <div class="prototipo-img-wrap">
+        <img src="IMG_8254.jpg" alt="ETÉREO Nodo Agua" class="prototipo-img">
+      </div>
+      <h3 class="prototipo-nombre">NODO AGUA</h3>
     </div>
   </div>
 </section>
@@ -564,6 +678,12 @@
         <textarea id="form-mensaje" rows="4" placeholder="¿Cómo podemos ayudarte o colaborar?" required></textarea>
       </div>
       <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;">Enviar mensaje</button>
+      <div class="social-links" style="margin-top:1.5rem;justify-content:center;">
+        <a href="https://www.instagram.com/etereo.guard" target="_blank" rel="noopener" class="instagram-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @etereo.guard
+        </a>
+      </div>
       <p id="form-success" style="display:none;color:var(--ok);font-size:0.85rem;margin-top:1rem;text-align:center;">✓ Redirigiendo a tu cliente de correo...</p>
     </form>
   </div>
