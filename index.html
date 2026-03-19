@@ -282,27 +282,29 @@
     .contact-person:last-child { border-bottom: none; }
     .contact-person strong { color: var(--text); display: block; }
 
-    footer { text-align: center; padding: 2rem; font-size: 0.75rem; color: rgba(157,138,181,0.5); border-top: 1px solid rgba(139,92,246,0.1); }
-
-    @media (max-width: 768px) {
-      .two-col, .sim-wrapper { grid-template-columns: 1fr; gap: 2rem; }
-      nav { padding: 1rem 4%; }
-      .nav-links { gap: 0.8rem; }
-      .nav-links a { font-size: 0.75rem; }
-      .nav-logo { font-size: 1.1rem; }
-      section { padding: 5rem 5% 3rem; }
-      .phone-mockup { width: 220px; height: 440px; }
-      .hero-title { font-size: clamp(2rem, 8vw, 3rem); }
-      .hero-sub { font-size: 0.95rem; }
-      .cards { grid-template-columns: 1fr; }
-      .model-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
-      .section-title { font-size: clamp(1.4rem, 6vw, 2rem); }
-      .sim-wrapper { grid-template-columns: 1fr; }
-      .sim-features { margin-top: 1rem; }
-      .contact-details { padding: 1.2rem; }
-      .btn-primary { width: 100%; text-align: center; }
-    }
+    footer { /* ===== FOOTER CON LOGOS ===== */
+footer { font-size: 0.75rem; color: rgba(157,138,181,0.5); border-top: 1px solid rgba(139,92,246,0.15); overflow: hidden; }
+.footer-main { display: flex; justify-content: space-between; align-items: center; padding: 2rem 8%; gap: 2rem; flex-wrap: wrap; border-bottom: 1px solid rgba(139,92,246,0.08); }
+.footer-left .footer-brand { font-size: 1rem; font-weight: 700; letter-spacing: 0.25em; color: var(--purple-accent); margin-bottom: 0.2rem; }
+.footer-left .footer-tagline { font-size: 0.68rem; color: var(--muted); letter-spacing: 0.06em; }
+.footer-school { display: flex; flex-direction: column; align-items: flex-end; gap: 0.8rem; }
+.footer-school .school-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(192,132,252,0.8); font-weight: 600; }
+.footer-school .school-logos { display: flex; align-items: center; gap: 1rem; }
+.footer-school .school-logo-img { width: 40px; height: 40px; object-fit: contain; background: transparent; filter: drop-shadow(0 0 8px rgba(192,132,252,0.2)); transition: filter 0.3s, transform 0.3s; }
+.footer-school .footer-ig-school { display: inline-flex; align-items: center; justify-content: center; color: var(--purple-accent); text-decoration: none; border: 1px solid rgba(192,132,252,0.3); padding: 0.4rem; border-radius: 50%; transition: all 0.3s; }
+.footer-school .footer-ig-school:hover { color: var(--white); border-color: var(--purple-accent); background: rgba(192,132,252,0.1); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 8%; flex-wrap: wrap; gap: 0.4rem; }
+.footer-bottom .copyright { font-size: 0.68rem; color: rgba(157,138,181,0.3); }
+.footer-bottom .footer-ig-etereo { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.68rem; color: var(--purple-accent); text-decoration: none; transition: color 0.3s; }
+.footer-bottom .footer-ig-etereo:hover { color: var(--white); }
+@media (max-width: 768px) {
+  .footer-main { flex-direction: column; align-items: center; text-align: center; padding: 1.8rem 5%; }
+  .footer-left { text-align: center; }
+  .footer-school { align-items: center; }
+  .footer-school .school-logos { gap: 1.5rem; }
+  .footer-school .school-logo-img { width: 40px; height: 40px; }
+  .footer-bottom { justify-content: center; padding: 0.85rem 5%; gap: 0.6rem; }
+}
 
     @media (max-width: 480px) {
       nav { padding: 0.9rem 4%; }
